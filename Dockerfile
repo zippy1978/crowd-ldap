@@ -11,4 +11,4 @@ RUN npm install
 
 EXPOSE 1389
 
-CMD pm2 start app.js
+CMD ["pm2", "start", "app.js", "--no-daemon"]
