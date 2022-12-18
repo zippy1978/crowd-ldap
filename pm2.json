@@ -1,0 +1,5 @@
+{
+    "name": "app",
+    "script": "app.js",
+    "instances": "2"
+}
