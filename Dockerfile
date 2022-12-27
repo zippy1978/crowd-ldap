@@ -1,14 +1,15 @@
-FROM kallikrein/node:5.5.0
+FROM keymetrics/pm2:8-alpine
 
-MAINTAINER Gilles Grousset "gi.grousset@gmail.com"
+LABEL maintainer="gi.grousset@gmail.com"
 
-RUN npm i -g pm2 npm-check-updates
-
-RUN mkdir -p /app
-COPY . /app
 WORKDIR /app
-RUN npm install
 
-EXPOSE 1389
+COPY *.js ./
+COPY package*.json ./
+COPY pm2.json .
 
-CMD ["pm2", "start", "app.js", "--no-daemon"]
+ENV NPM_CONFIG_LOGLEVEL warn
+
+RUN npm install --production
+
+CMD [ "pm2-runtime", "start", "pm2.json" ]

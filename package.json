@@ -1,6 +1,6 @@
 {
   "name": "crowd-ldap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LDAP server delegating authentication to Atlassian Crowd",
   "main": "app.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "Gilles Grousset <gi.grousset@gmail.com> (http://zippy1978.tumblr.com/)",
   "license": "ISC",
   "dependencies": {
-    "q": "^1.4.1",
-    "ldapjs": "^1.0.0",
-    "atlassian-crowd-client": "^1.2.0"
+    "q": "^1.5.1",
+    "ldapjs": "^2.3.3",
+    "atlassian-crowd-client": "^2.0.0"
   }
 }
